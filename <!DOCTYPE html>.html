@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Health Check</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow">
+        <h1 class="text-2xl font-bold mb-6 text-center">Online Business Health Check</h1>
+        <form id="businessForm" class="space-y-6">
+            <!-- Business Overview -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">1. Business Overview</h2>
+                <label class="block mb-2">Business Name:</label>
+                <input type="text" id="businessName" class="w-full p-2 border border-gray-300 rounded" required>
+
+                <label class="block mb-2 mt-4">Industry:</label>
+                <select id="industry" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Retail</option>
+                    <option>Manufacturing</option>
+                    <option>Service</option>
+                    <option>E-commerce</option>
+                    <option>Other</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Number of Employees:</label>
+                <select id="employees" class="w-full p-2 border border-gray-300 rounded">
+                    <option>1-10</option>
+                    <option>11-50</option>
+                    <option>51-100</option>
+                    <option>100+</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Years in Operation:</label>
+                <select id="yearsOperation" class="w-full p-2 border border-gray-300 rounded">
+                    <option>0-2 years</option>
+                    <option>3-5 years</option>
+                    <option>6-10 years</option>
+                    <option>10+ years</option>
+                </select>
+            </section>
+
+            <!-- Financial Health -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">2. Financial Health</h2>
+                <label class="block mb-2">What is your current annual revenue?</label>
+                <select id="revenue" class="w-full p-2 border border-gray-300 rounded">
+                    <option>< ₹25 lakh</option>
+                    <option>₹25 lakh – ₹1 crore</option>
+                    <option>₹1 crore – ₹5 crore</option>
+                    <option>₹5 crore+</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Have you experienced consistent revenue growth over the last three years?</label>
+                <select id="revenueGrowth" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How would you rate your business’s cash flow management?</label>
+                <select id="cashFlow" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Strong – We rarely experience cash flow issues.</option>
+                    <option>Moderate – We manage cash flow, but it’s tight.</option>
+                    <option>Weak – We often struggle to manage cash flow.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Do you have a financial forecasting and budgeting system in place?</label>
+                <select id="forecasting" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes, and it’s effective.</option>
+                    <option>Yes, but it’s not always accurate.</option>
+                    <option>No, we don't have one.</option>
+                </select>
+            </section>
+
+            <!-- Operations & Efficiency -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">3. Operations & Efficiency</h2>
+                <label class="block mb-2">How would you rate your overall operational efficiency?</label>
+                <select id="operationalEfficiency" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Excellent – Processes are streamlined.</option>
+                    <option>Good – Some areas could improve.</option>
+                    <option>Poor – We experience bottlenecks.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Are your business processes documented and regularly reviewed?</label>
+                <select id="processDocumentation" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes, everything is well-documented.</option>
+                    <option>Partially – Some processes are documented.</option>
+                    <option>No, we lack formal documentation.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How do you track key operational metrics?</label>
+                <select id="trackingMetrics" class="w-full p-2 border border-gray-300 rounded">
+                    <option>We have clear KPIs and tracking systems.</option>
+                    <option>We track a few metrics but need improvement.</option>
+                    <option>We don't track operational metrics regularly.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Do you use any project management or business operation software?</label>
+                <select id="projectManagementSoftware" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </section>
+
+            <!-- Human Resources -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">4. Human Resources (HR)</h2>
+                <label class="block mb-2">Do you have a structured recruitment process?</label>
+                <select id="recruitmentProcess" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How would you describe your employee retention rate?</label>
+                <select id="employeeRetention" class="w-full p-2 border border-gray-300 rounded">
+                    <option>High – Employees stay for several years.</option>
+                    <option>Average – Some turnover is normal.</option>
+                    <option>Low – We experience high employee turnover.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Do you offer any professional development or upskilling programs for employees?</label>
+                <select id="upskilling" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes, regularly</option>
+                    <option>Occasionally</option>
+                    <option>No, we don’t offer such programs.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How is your employee performance measured and evaluated?</label>
+                <select id="employeePerformance" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Through regular performance reviews and KPIs.</option>
+                    <option>Occasionally, but not structured.</option>
+                    <option>No formal system in place.</option>
+                </select>
+            </section>
+
+            <!-- Sales & Marketing -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">5. Sales & Marketing</h2>
+                <label class="block mb-2">Do you have a dedicated marketing strategy for customer acquisition?</label>
+                <select id="marketingStrategy" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes, it’s well-defined and active.</option>
+                    <option>Yes, but it needs improvement.</option>
+                    <option>No, we don’t have a structured strategy.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Which marketing channels do you use for customer acquisition?</label>
+                <select id="marketingChannels" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Social Media</option>
+                    <option>Email Marketing</option>
+                    <option>SEO & Google Ads</option>
+                    <option>Traditional Media (TV/Print)</option>
+                    <option>Others</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How would you rate your sales team’s performance?</label>
+                <select id="salesPerformance" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Excellent – Consistently meets or exceeds targets.</option>
+                    <option>Good – Meets targets, but there’s room for improvement.</option>
+                    <option>Poor – Often fails to meet targets.</option>
+                </select>
+
+                <label class="block mb-2 mt-4">What percentage of your leads are converted into paying customers?</label>
+                <select id="conversionRate" class="w-full p-2 border border-gray-300 rounded">
+                    <option>> 50%</option>
+                    <option>25%-50%</option>
+                    <option>< 25%</option>
+                    <option>We don’t track this.</option>
+                </select>
+            </section>
+
+            <!-- Technology & Innovation -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">6. Technology & Innovation</h2>
+                <label class="block mb-2">Do you leverage technology to automate business processes?</label>
+                <select id="automation" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes, extensively</option>
+                    <option>Somewhat</option>
+                    <option>No</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Do you invest in technology upgrades to stay competitive?</label>
+                <select id="technologyInvestment" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>Sometimes</option>
+                    <option>No</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Are you investing in any new product or service innovations?</label>
+                <select id="newProductInnovation" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>Not currently, but planning to</option>
+                    <option>No</option>
+                </select>
+            </section>
+
+            <!-- Risk Management -->
+            <section>
+                <h2 class="text-xl font-semibold mb-4">7. Risk Management</h2>
+                <label class="block mb-2">Do you have a risk management plan in place?</label>
+                <select id="riskManagementPlan" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>In progress</option>
+                    <option>No</option>
+                </select>
+
+                <label class="block mb-2 mt-4">How would you rate your business’s readiness to handle unexpected disruptions?</label>
+                <select id="businessContinuity" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Very prepared</option>
+                    <option>Somewhat prepared</option>
+                    <option>Not prepared</option>
+                </select>
+
+                <label class="block mb-2 mt-4">Do you have business insurance coverage for critical risks?</label>
+                <select id="businessInsurance" class="w-full p-2 border border-gray-300 rounded">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </section>
+
+            <!-- Submit -->
+            <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('businessForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const businessData = {
+                businessName: document.getElementById('businessName').value,
+                industry: document.getElementById('industry').value,
+                employees: document.getElementById('employees').value,
+                yearsOperation: document.getElementById('yearsOperation').value,
+                revenue: document.getElementById('revenue').value,
+                revenueGrowth: document.getElementById('revenueGrowth').value,
+                cashFlow: document.getElementById('cashFlow').value,
+                forecasting: document.getElementById('forecasting').value,
+                operationalEfficiency: document.getElementById('operationalEfficiency').value,
+                processDocumentation: document.getElementById('processDocumentation').value,
+                trackingMetrics: document.getElementById('trackingMetrics').value,
+                projectManagementSoftware: document.getElementById('projectManagementSoftware').value,
+                recruitmentProcess: document.getElementById('recruitmentProcess').value,
+                employeeRetention: document.getElementById('employeeRetention').value,
+                upskilling: document.getElementById('upskilling').value,
+                employeePerformance: document.getElementById('employeePerformance').value,
+                marketingStrategy: document.getElementById('marketingStrategy').value,
+                marketingChannels: document.getElementById('marketingChannels').value,
+                salesPerformance: document.getElementById('salesPerformance').value,
+                conversionRate: document.getElementById('conversionRate').value,
+                automation: document.getElementById('automation').value,
+                technologyInvestment: document.getElementById('technologyInvestment').value,
+                newProductInnovation: document.getElementById('newProductInnovation').value,
+                riskManagementPlan: document.getElementById('riskManagementPlan').value,
+                businessContinuity: document.getElementById('businessContinuity').value,
+                businessInsurance: document.getElementById('businessInsurance').value
+            };
+            console.log(businessData);
+            alert('Form submitted! Check console for data.');
+        });
+    </script>
+</body>
+</html>
+
+
+            <!-- Submit -->
+            <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="mt-8 hidden">
+            <h2 class="text-2xl font-bold mb-4">Consultation Readiness Score: <span id="score"></span>/100</h2>
+            <p class="mb-4">Based on your responses, we recommend booking a consultation to discuss how we can help improve your business's performance.</p>
+            <a href="/book-consultation" class="bg-green-500 text-white py-2 px-4 rounded">Book a Consultation</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('businessForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Simple score calculation based on answers
+            const score = calculateReadinessScore();
+            
+            // Show the result section
+            document.getElementById('score').innerText = score;
+            document.getElementById('result').classList.remove('hidden');
+
+            // Optionally hide the form after submission
+            document.getElementById('businessForm').classList.add('hidden');
+        });
+
+        function calculateReadinessScore() {
+            let score = 0;
+
+            // Get values and assign points
+            const revenueGrowth = document.getElementById('revenueGrowth').value;
+            const cashFlow = document.getElementById('cashFlow').value;
+            const processDocumentation = document.getElementById('processDocumentation').value;
+            const automation = document.getElementById('automation').value;
+            const riskManagementPlan = document.getElementById('riskManagementPlan').value;
+
+            // Assign points based on answers
+            score += (revenueGrowth === 'Yes') ? 20 : (revenueGrowth === 'Somewhat') ? 10 : 0;
+            score += (cashFlow === 'Yes') ? 20 : (cashFlow === 'Somewhat') ? 10 : 0;
+            score += (processDocumentation === 'Yes') ? 20 : (processDocumentation === 'In progress') ? 10 : 0;
+            score += (automation === 'Yes, extensively') ? 20 : (automation === 'Somewhat') ? 10 : 0;
+            score += (riskManagementPlan === 'Yes') ? 20 : (riskManagementPlan === 'In progress') ? 10 : 0;
+
+            return score;
+        }
+    </script>
+</body>
+</html>
